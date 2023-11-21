@@ -4,18 +4,29 @@ using namespace std;
 int solve(int arr[], int n, int k)
 {
 
+    // int count = 0;
+
+    // for (int j = 0; j < n - 1; j++)
+    // {
+    //     for (int i = j + 1; i < n; i++)
+    //     {
+
+    //         if (arr[j] + arr[i] == k)
+    //         {
+    //             count++;
+    //         }
+    //     }
+    // }
     int count = 0;
-
-    for (int j = 0; j < n - 1; j++)
+    unordered_map<int, int> mp;
+    for (int i = 0; i < n; i++)
     {
-        for (int i = j + 1; i < n; i++)
+        int b = k - arr[i];
+        if (mp[b])
         {
-
-            if (arr[j] + arr[i] == k)
-            {
-                count++;
-            }
+            count += mp[b];
         }
+        mp[arr[i]]++;
     }
 
     return count;
@@ -23,8 +34,8 @@ int solve(int arr[], int n, int k)
 
 int main()
 {
-    int k = 3;
-    int arr[] = {1, 2, 3, 4, 1, 2, 3, 4, 46, 7, 78, 95, 4, 3, 33, 3};
+    int k = 2;
+    int arr[] = {1, 1, 1, 1};
     int n = sizeof(arr) / sizeof(int);
     int ans = solve(arr, n, k);
     cout << ans;
