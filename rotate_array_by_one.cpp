@@ -1,4 +1,4 @@
-
+// Given an array, rotate the array by one position in clock-wise direction.
 #include <bits/stdc++.h>
 
 using namespace std;
