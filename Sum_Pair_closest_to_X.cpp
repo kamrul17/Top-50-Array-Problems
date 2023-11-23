@@ -4,7 +4,6 @@ using namespace std;
 vector<int> sumClosest(int arr[], int n, int x)
 {
 
-    // Initialize pointers
     int left = 0, right = n - 1;
 
     // Initialize variables to keep track of the closest sum and the pair
@@ -12,7 +11,6 @@ vector<int> sumClosest(int arr[], int n, int x)
     // cout << closestSum << endl;
     vector<int> result;
 
-    // Iterate through the array using two pointers
     while (left < right)
     {
         int currentSum = arr[left] + arr[right];
