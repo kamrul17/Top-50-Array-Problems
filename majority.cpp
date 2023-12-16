@@ -71,7 +71,7 @@ int solve(int arr[], int n)
         }
     }
     if (count1 > n / 2)
-        ;
+
     {
         return element;
     }
